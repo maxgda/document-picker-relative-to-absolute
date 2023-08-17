@@ -1,6 +1,7 @@
 import datetime
 import json
 import io
+import os
 
 import requests
 
@@ -16,7 +17,12 @@ def export_to_file(ndjson):
     current_time = datetime.datetime.now()
     formatted_time = current_time.strftime('%d%m%y-%H%M%S')
     filename = f"{channel}-{project_id}-{content_path}{formatted_time}.ndjson"
-    with open(f"file-exports/{filename}", 'w') as json_file:
+    directory_path = "file-exports"
+    # Create the directory if it doesn't exist
+    if not os.path.exists(directory_path):
+        os.makedirs(directory_path)
+    file_path = os.path.join(directory_path, filename)
+    with open(f"{file_path}", 'w') as json_file:
         for data in ndjson:
             json_string = json.dumps(data)
             json_file.write(json_string + '\n')
