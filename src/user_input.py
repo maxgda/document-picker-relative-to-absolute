@@ -9,7 +9,7 @@ response_map = {
 
 def get_yes_no_input(prompt):
     while True:
-        user_input = input(f"{prompt} y/n").strip().lower()
+        user_input = input(f"{prompt} (y/n)  ").strip().lower()
         if user_input in response_map:
             return response_map[user_input]
         else:
