@@ -22,9 +22,9 @@ Create .env file in the same directory as this readme(root) and specify in it th
 
 ```
 AUTH_TOKEN = ""
-ENVIRONMENT =  "profserv01"
-CHANNEL = "max-test"
-PROJECT_ID = "vL0tK"
+ENVIRONMENT =  ""
+CHANNEL = ""
+PROJECT_ID = ""
 ```
 for example:
 ```
