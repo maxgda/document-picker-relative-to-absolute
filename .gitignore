@@ -1,4 +1,4 @@
-/file-exports/*
+/file-exports/**
 /venv
 .env
 .idea
